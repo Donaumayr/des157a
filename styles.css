@@ -30,7 +30,7 @@ body {
     background-repeat: repeat-y;
     height:720px;
     width:100%;
-    animation: scrolling 15s linear infinite;
+    animation: scrolling 12s linear infinite;
 }
 
 @keyframes scrolling {
