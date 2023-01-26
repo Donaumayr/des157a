@@ -2,9 +2,6 @@ body {
     margin:auto;
     max-width: 1200px;
     min-width: 900px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
     padding:0;
     font-family: 'Gelasio', serif;
     font-weight: 300;
