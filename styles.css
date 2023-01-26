@@ -147,8 +147,8 @@ span {
 main {
     background-color: #252833;
     display:flex;
-    flex-wrap: wrap;
-    height: 100%;
+    flex-wrap: nowrap;
+    height: calc(100vh - 314px);
     position: relative;
     z-index: 0;
 }
