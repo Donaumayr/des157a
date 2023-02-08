@@ -1,0 +1,89 @@
+main {
+    display: flex;
+    background-image: url(images/gongbg.jpg);
+}
+
+#door {
+    height: 750px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 532px);
+    position: relative;
+}
+
+section h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    color: #906f1d96;
+    font-size: 1.45em;
+    letter-spacing: 0.15em;
+    margin-top:25px;
+    margin-bottom: 10px;
+}
+
+section h1 {
+    font-family: 'Indie Flower', cursive;
+    color: #90701D;
+    font-weight: 200;
+    font-size: 4em;
+    margin-top:0px;
+}
+
+#circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top:340px;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: nowrap;
+}
+
+#intro h2 {
+    letter-spacing: normal;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+#intro h3 {
+    font-family: 'Indie Flower', cursive;
+    color: #90701D;;
+    margin:0;
+    font-weight: 100;
+}
+
+#one {
+    display:none;
+    margin-top:80px;
+}
+
+#gbtn {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    bottom:134px;
+}
+
+section img {
+    width: 400px;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: #8f431e;
+}
