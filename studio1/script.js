@@ -3,8 +3,9 @@
     console.log('reading js');
 
     const btn = document.querySelector('#gbtn');
-    btn.addEventListener('click', function(){
-        
+    btn.addEventListener('mousedown', function(e){
+        e.preventDefault();
+        document.querySelectorAll('.showing')
     });
 
     const f = document.querySelector('form');
