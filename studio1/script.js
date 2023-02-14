@@ -5,17 +5,17 @@
     const btn = document.querySelector('#gbtn');
     btn.addEventListener('mousedown', function(e){
         e.preventDefault();
-        document.querySelectorAll('.showing')
+        document.querySelector('.hidden').className = 'overlay showing';
     });
 
     const f = document.querySelector('form');
     const m = document.querySelector('#madlib');
     f.addEventListener('submit', function(e){
         e.preventDefault();
-        let n = document.querySelector('#noun1').value;
-        let n2 = document.querySelector('#noun2').value;
-        let adj = document.querySelector('#adj').value;
-        let v = document.querySelector('#verb').value;
+        const n = document.querySelector('#noun1').value;
+        const n2 = document.querySelector('#noun2').value;
+        const adj = document.querySelector('#adj').value;
+        const v = document.querySelector('#verb').value;
 
         let myText;
         console.log(n);
@@ -37,7 +37,19 @@
             document.querySelector('#verb').focus();
         }
         else {
-            myText = `The words you gave are ${n}, ${n2}, ${adj}, ${v}`;
+            document.querySelector('.overlay').className = 'overlay hidden';
+            const arr = document.querySelectorAll('.showing');
+            for (const el of arr) {
+                el.className = 'hidden'
+            }
+            const arr2 = document.querySelectorAll('.white');
+            for (const el of arr2) {
+                el.style.color = 'white';
+            }
+            document.querySelector('#door').className = 'closeleft';
+            document.querySelector('#door2').className = 'closeright';
+            document.querySelector('#madlib').style.display = 'block';
+            myText = `The serene <b>${n}</b> is a majestic and soothing place to meditate. The crisp, fresh air fills your lungs and you can feel the cool breeze on your skin. As you look around, you see the <b>${adj}</b> views of the surrounding <b>${n2}</b>, which takes your breath away. The <b>${v}</b> of the birds, rustling of the leaves, and the distant sound of waterfalls make it a perfect place for inner peace. You close your eyes, and start focusing on your breath, sinking deeper into a state of tranquility and relaxation. The <b>${n}</b> embraces you, and you feel a sense of calm and rejuvenation that lasts long after you leave.`;
             const textFields = document.querySelectorAll('input');
             for (const tField of textFields) {
                 if (tField.type !== 'submit') {

@@ -16,43 +16,50 @@
 </head>
 <body>
     <header>
-
     </header>
     <main>
         <!-- <div id="door"> -->
-        <img id="door" src="images/door1.svg" alt="door">
-        <section>
-            <h2>WELCOME TO</h2>
-            <h1>Shangri-La</h1>
-            <img src="images/gongedit.png" alt="gong">
-            <div id="circle">
-                <section id="intro">
-                    <h3>Relax</h3>
-                    <h2>FIVE WORDS</h2>
-                    <h3>with only</h3>
-                </section>
+        <section id="golden" class="showing"></section>
+        <section id="back" class="overlay hidden">
+            <img src="images/scroll.png" alt="scroll">
+            <div id="scroll">
                 <form id="one">
-                    <label for="noun1">Provide a noun</label>
+                    <label id="first" for="noun1">Provide an adjective</label>
                     <input type="text" id="noun1">
 
-                    <!-- <label for="noun2">Provide another noun</label>
+                    <label for="noun2">Provide a noun</label>
                     <input type="text" id="noun2">
 
                     <label for="adj">Provide an adjective</label>
                     <input type="text" id="adj">
 
                     <label for="verb">Provide a verb</label>
-                    <input type="text" id="verb">-->
+                    <input type="text" id="verb">
                     
-                    <input type="submit" value="send">
+                    <input id="submitbtn" type="submit" value="">
                 </form>
             </div>
-            <img id="gbtn" src="images/button.svg" alt="button">
+            <img src="images/scroll2.png" alt="scroll">
         </section>
-        <img src="images/door2.svg" alt="door">
+        <img id="door" src="images/door1ft.png" alt="door">
+        <section>
+            <h2 class="white">WELCOME TO</h2>
+            <h1 class="white">Shangri-La</h1>
+            <article id="madlib"></article>
+            <img id="gong" class="showing" src="images/gongfinal.png" alt="gong">
+            <div id="circle" class="showing">
+                <section id="intro">
+                    <h3>Relax</h3>
+                    <h2>FIVE WORDS</h2>
+                    <h3>with only</h3>
+                </section>
+            </div>
+            <button id="gbtn" class="showing"></button>
+        </section>
+        
+        <img id="door2" src="images/door2ft.png" alt="door">
         <!-- <div id="door2"></div>*/-->
+        
     </main>
-    <footer>
-    </footer>
 </body>
 </html>
