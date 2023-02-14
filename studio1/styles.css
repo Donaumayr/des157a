@@ -34,6 +34,9 @@ main {
     position: relative;
     z-index: -1;
     overflow: hidden;
+}
+
+.scrollanimation {
     animation: unroll 3s ease-in forwards;
 }
 

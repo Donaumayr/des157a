@@ -6,6 +6,7 @@
     btn.addEventListener('mousedown', function(e){
         e.preventDefault();
         document.querySelector('.hidden').className = 'overlay showing';
+        document.querySelector('#scroll').className = 'scrollanimation';
     });
 
     const f = document.querySelector('form');
