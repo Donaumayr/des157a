@@ -210,3 +210,7 @@ footer a {
     text-decoration: none;
     color:#8AB609
 }
+
+figcaption {
+    color:rgb(154, 154, 154);
+}
