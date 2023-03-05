@@ -1,0 +1,39 @@
+body {
+    margin:0;
+    color:white;
+    font-family: 'Inter, sans-serif';
+}
+
+#view {
+    position: fixed;
+    height: 750px;
+    width: 1200px;
+    z-index: -1;
+    background-image: url(images/headerbg.jpg);
+}
+
+#headertext {
+    height: 750px;
+    width: 1200px;
+}
+
+section {
+    height: 750px;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+}
+.caption {
+    display: flex;
+}
+
+.initial {
+    background-image: url(images/headerbg.jpg);
+}
+.hall {
+    background-image: url(images/hallbg.jpg);
+}
+.street {
+    background-image: url(images/streetbg.jpg);
+}
+
