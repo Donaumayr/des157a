@@ -5,10 +5,8 @@
     window.addEventListener('load', function(){
         const sections = document.querySelectorAll('section');
         let secTops = [];
-        let pageTop;
         let count = 1;
         let pCount = 1;
-        let doneResizing;
         sections.forEach(function(section){
             secTops.push(Math.floor(section.getBoundingClientRect().top)+window.pageYOffset);
         });
@@ -20,15 +18,27 @@
     
             if(pageTop > secTops[count]) {
                 count++;
-                console.log(`scroll down ${count}`);
             }else if(count > 1 && pageTop < secTops[count - 1]) {
                 count--;
-                console.log(`scrolling up ${count}`);
             }
 
             if (count != pCount) {
-                
+                console.log("update count");
+                document.querySelector(`#bg${count}`).className = 'view current';
+                document.querySelector(`#bg${pCount}`).className = 'view hidden';
+                //document.querySelector('#view').src = `images/${count}bg.jpg`;
+                pCount = count;
             }
         });
     });
+
+    const imgs = document.querySelectorAll('.caption img');
+    for (let img of imgs) {
+        img.addEventListener('mouseover', function(){
+            img.className = 'zoomed';
+        });
+        img.addEventListener('mouseout', function(){
+            img.className='normal';
+        })
+    }
 })();

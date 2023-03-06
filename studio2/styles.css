@@ -1,15 +1,18 @@
 body {
     margin:0;
     color:white;
-    font-family: 'Inter, sans-serif';
+    background-color: black;
+    font-family: 'Inter', sans-serif;
 }
 
-#view {
+.view {
     position: fixed;
     height: 750px;
     width: 1200px;
     z-index: -1;
-    background-image: url(images/headerbg.jpg);
+    transition-property: visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
 }
 
 #headertext {
@@ -23,17 +26,68 @@ section {
     display: flex;
     flex-direction: column;
 }
+
+section h1 {
+    margin-left:60px;
+    margin-bottom: 40px;
+}
+
 .caption {
     display: flex;
+    align-items: center;
+    margin-left:60px;
+    margin-right: 60px;
 }
 
-.initial {
-    background-image: url(images/headerbg.jpg);
-}
-.hall {
-    background-image: url(images/hallbg.jpg);
-}
-.street {
-    background-image: url(images/streetbg.jpg);
+.odd {
+    align-items: normal;
 }
 
+.caption p {
+    margin-left:30px;
+    line-height: 2em;
+}
+
+.caption .pleft {
+    margin-left:0;
+    margin-right:30px;
+    margin-top: 0;
+}
+
+.normal {
+    animation: shrink 2s ease forwards;
+}
+
+.zoomed {
+    height: 680px;
+    width: 447px;
+    animation: expand 2s ease forwards;
+}
+
+@keyframes expand {
+    0% {height:420px;width:630px}
+    100% {height:447px;width:680px}
+}
+
+@keyframes shrink {
+    0% {height:447px;width:680px}
+    100% {height:420px;width:630px}
+}
+
+@keyframes show {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@keyframes hide {
+    0% {opacity:1;}
+    100% {opacity:0}
+}
+
+.hidden {
+    animation: hide 2s ease forwards;
+}
+
+.current {
+    animation: show 2s ease forwards;
+}
