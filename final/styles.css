@@ -19,6 +19,10 @@ p {
     margin-top:10px;
 }
 
+figure {
+    margin:0;
+}
+
 figcaption {
     margin-top:10px;
 }
