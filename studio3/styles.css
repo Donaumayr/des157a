@@ -1,0 +1,83 @@
+body {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.5em;
+    color:#fff;
+    position: relative;
+}
+main {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 1200px;
+    height: 750px;
+    background-image: url(images/feltbg.jpg);
+    display: flex;
+}
+#board {
+    width: calc(100% - 500px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:black;
+}
+
+#p1 {
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-right: solid 2px #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#p2 {
+    width:250px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-left: solid 2px #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+#p1score {
+    background-image: url(images/p1chip.svg);
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    line-height: 130px;
+    font-size: 3em;
+}
+#p2score {
+    background-image: url(images/p2chip.svg);
+    height: 150px;
+    width: 150px;
+    text-align: center;
+    line-height: 130px;
+    font-size: 3em;
+}
+
+#topcontrol {
+    display: flex;
+    flex-direction: row-reverse;
+}
+#quit {
+}
+
+button { 
+    padding: 10px;
+}
+
+#gamecontrol, #score {
+}
+
+#game {
+    background-color:#eaeaea;
+}
+#actions {
+    background-color: silver;
+}
