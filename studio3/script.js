@@ -55,7 +55,7 @@
         gameData.rollSum = gameData.roll1 + gameData.roll2;
 
         if(gameData.rollSum == 2){
-            game.innerHTML += '<p>Oh Snap! Snake Eyes!</p>';
+            game.innerHTML += '<p>Pocket Rockets!</p>';
             gameData.score[gameData.index] = 0;
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             setTimeout(setUpTurn, 2000);
@@ -63,7 +63,7 @@
         }
         else if(gameData.roll1 == 1 || gameData.roll2 == 1){
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-            game.innerHTML += `<p>Sorry, one of your rolls was a 1. Switching to ${gameData.players[gameData.index]}</p>`;
+            game.innerHTML += `<p>Sorry, one of your draws was a Ace. Switching to ${gameData.players[gameData.index]}</p>`;
             setTimeout(setUpTurn, 2000);
         }
         else {
