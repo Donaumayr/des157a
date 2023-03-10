@@ -15,11 +15,24 @@ main {
 }
 #board {
     width: calc(100% - 500px);
+    height:100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left:20px;
+    padding-right: 20px;
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
+article {
+    width:400px;
+    line-height: 2em;
+}
 #p1 {
     width: 250px;
     background-color: rgba(255, 255, 255, 0.3);
@@ -38,17 +51,31 @@ main {
     align-items: center;
     justify-content: center;
 }
+h1 {
+    font-size: 4em;
+    padding-bottom: 0;
+    margin:20px;
+    margin-top:60px;
+}
 h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
     font-weight: 500;
+    text-align: center;
 }
+#subheader {
+    font-weight: 100;
+    margin-top:0;
+    font-size: 1.05em;
+    color: #f8eec9;
+}
+
 #p1score {
     background-image: url(images/p1chip.svg);
     height: 150px;
     width: 150px;
     text-align: center;
-    line-height: 130px;
+    line-height: 135px;
     font-size: 3em;
 }
 #p2score {
@@ -56,27 +83,78 @@ h2 {
     height: 150px;
     width: 150px;
     text-align: center;
-    line-height: 130px;
+    line-height: 135px;
     font-size: 3em;
 }
 
 #topcontrol {
     display: flex;
     flex-direction: row-reverse;
+    width:100%;
 }
 #quit {
+    font-size: 2em;
+    margin:20px;
+    margin-bottom: 0;
+    margin-top:20px;
+}
+
+#startgame {
+    font-size: 2.6em;
+    margin-top:40px;
 }
 
 button { 
     padding: 10px;
+    background-color: transparent;
+    color: #f8eec9;
+    border:none;
+    outline:none;
+    cursor: pointer;
 }
 
-#gamecontrol, #score {
+#actions {
+    margin-top: auto;
+    display: flex;
+}
+
+#draw, #drawagain {
+    background-image: url(images/draw.svg);
+    width:276px;
+    height:115px;
+    margin-top: auto;
+}
+
+#pass {
+    background-image: url(images/pass.svg);
+    width: 128px;
+    height: 128px;
+    margin-left:50px;
+    margin-bottom: 20px;
+}
+
+#score {
+    margin-top:0;
+    padding-top: 0;
 }
 
 #game {
-    background-color:#eaeaea;
+
 }
-#actions {
-    background-color: silver;
+
+#game p {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.gamecontrol {
+}
+
+#game {
+    
+}
+
+.hidden {
+    display: none;
 }

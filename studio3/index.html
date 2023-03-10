@@ -15,17 +15,20 @@
     <main>
         <section id="p1">
             <h2>Player 1</h2>
-            <div id="p1score">5</div>
+            <div id="p1score"></div>
         </section>
         <section id="board">
             <div id="topcontrol"></div>
-            <h1>Game of PIG</h1>
-            <p>There are two players. The player whose turn it is rolls the dice. The total of the roll is added to the current player's score, unless either die comes up as a "one". If this happens, this player's turn is over, and it is the other player’s turn. After each roll, the current player can either roll again, (assuming a "one" was not rolled) or if the current player feels that luck is running thin, they can pass to the other player. The first player to get 30 points or higher wins.</p> 
-            <p>Oh, and if you roll two "ones" (snake eyes), your current score gets zeroed out. So don’t do that.</p>
-
-            <div id="gamecontrol">
-                <h2>Start a Game</h2>
-                <button id="startgame">Randomly Pick the First Player, and Start the Game</button>
+            <div class="intro">
+                <h1>PIG</h1>
+                <h3 id="subheader">Card Variation</h3>
+                <article>
+                    <p>There are two players. The player whose turn it is draws two cards. The total of the cards is added to the current player's score, unless either card comes up as a "Ace". If this happens, this player's turn is over, and it is the other player’s turn. After each draw, the current player can either draw again, (assuming an "Ace" was not drawn) or if the current player feels that luck is running thin, they can pass to the other player. The first player to get 30 points or higher wins.</p> 
+                    <p>However, if you roll two "Aces" (Pocket Rockets), your current score gets zeroed out.</p>
+                </article>
+            </div>
+            <div class="gamecontrol">
+                <button id="startgame">Begin</button>
             </div>
 
             <div id="game"></div>
