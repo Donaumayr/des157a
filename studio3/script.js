@@ -10,6 +10,11 @@
     const p2score = document.getElementById('p2score');
     const actionArea = document.getElementById('actions');
 
+    const startSound = new Audio('sounds/shuffle.mp3');
+    const drawSound = new Audio('sounds/draw.mp3');
+    const passSound = new Audio('sounds/pass.mp3');
+    const quitSound = new Audio('sounds/pounding-cards-on-table-99355.mp3');
+
     const gameData = {
         cards: ['images/card1.png', 'images/card2.png', 'images/card3.png', 'images/card4.png', 'images/card5.png', 'images/card6.png'],
         players: ['Player 1', 'Player 2'],
@@ -20,6 +25,10 @@
         index: 0,
         gameEnd: 29
     }
+    startGame.addEventListener('mousedown', function(){
+        startSound.play();
+    });
+
     startGame.addEventListener('click', function(){
         gameData.index = Math.round(Math.random());
         //gameControl.innerHTML = '<h2>The game has started</h2>';
@@ -29,8 +38,11 @@
         q.id = "quit";
         q.textContent = 'Quit';
         gameTop.appendChild(q);
+        document.getElementById('quit').addEventListener('mousedown', function(){
+            quitSound.play();
+        });
         document.getElementById('quit').addEventListener('click', function(){
-            location.reload();
+            setTimeout(function(){location.reload();}, 1000);
         });
 
         // console.log('set up the turn');
@@ -39,6 +51,9 @@
     function setUpTurn() {
         game.innerHTML = `<h2>${gameData.players[gameData.index]}'s Turn</h2>`;
         actionArea.innerHTML = '<button id="draw"></button>';
+        document.getElementById('draw').addEventListener('mousedown', function(){
+            drawSound.play();
+        });
         document.getElementById('draw').addEventListener('click', function(){
             console.log('draw cards!');
             throwDice();
@@ -63,17 +78,25 @@
         }
         else if(gameData.roll1 == 1 || gameData.roll2 == 1){
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-            game.innerHTML += `<p>Sorry, one of your draws was a Ace. Switching to ${gameData.players[gameData.index]}</p>`;
+            game.innerHTML += `<p>Sorry, one of your draws was an Ace.</p><p>Switching to ${gameData.players[gameData.index]}</p>`;
+            //score.innerHTML = `<p>Sorry, one of your draws was a Ace. Switching to ${gameData.players[gameData.index]}</p>`;
             setTimeout(setUpTurn, 2000);
         }
         else {
             gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
             actionArea.innerHTML = '<button id="drawagain"></button><button id="pass"></button>';
 
+            document.getElementById('drawagain').addEventListener('mousedown', function(){
+                drawSound.play();
+            });
             document.getElementById('drawagain').addEventListener('click', function(){
                 //setUpTurn();
                 game.innerHTML = `<h2>${gameData.players[gameData.index]}'s Turn</h2>`;
                 throwDice();
+            });
+
+            document.getElementById('pass').addEventListener('mousedown', function(){
+                passSound.play();
             });
             document.getElementById('pass').addEventListener('click', function(){
                 gameData.index ? (gameData.index = 0) : (gameData.index = 1);
