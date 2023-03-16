@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Game of PIG</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+	<link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <section class="p1">
+            <div class="p1score"></div>
+        </section>
+        <section id="board">
+            <div id="topcontrol"></div>
+            <div class="intro">
+                <h1>PIG</h1>
+                <h3 id="subheader">Card Variation</h3>
+                <article>
+                    <p>There are two players. The player whose turn it is draws two cards. The total of the cards is added to the current player's score, unless either card comes up as a "Ace". If this happens, this player's turn is over, and it is the other player’s turn. After each draw, the current player can either draw again, (assuming an "Ace" was not drawn) or if the current player feels that luck is running thin, they can pass to the other player. The first player to get 30 points or higher wins.</p> 
+                    <p>However, if you roll two "Aces" (Pocket Rockets), your current score gets zeroed out.</p>
+                </article>
+            </div>
+            <div class="gamecontrol">
+                <button id="startgame">Begin</button>
+            </div>
+
+            <div id="game"></div>
+            <div id="actions"></div>
+            <div id="score"></div>
+        </section>
+        <section class="p2">
+            <div class="p2score"></div>
+        </section>
+        
+    </main>
+</body>
+</html>
