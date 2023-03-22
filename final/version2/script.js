@@ -137,18 +137,17 @@
             image.style.top = `${((gameData.numTurns[gameData.index])*80)+93}px`;
             image.className = 'shownslow';
             pdisplayon.appendChild(image);
-            
+            gameData.numTurns[gameData.index] += 1;
             document.getElementById('drawagain').addEventListener('mousedown', function(){
                 drawSound.play();
             });
             document.getElementById('drawagain').addEventListener('click', function(){
                 //setUpTurn();
-                console.log(`turns: ${gameData.numTurns[gameData.index]}`);
-                gameData.numTurns[gameData.index] += 1;
+                //console.log(`turns: ${gameData.numTurns[gameData.index]}`);
+                //gameData.numTurns[gameData.index] += 1;
                 game.innerHTML = `<h2>${gameData.players[gameData.index]}'s Turn</h2>`;
                 throwDice();
             });
-            
             document.getElementById('pass').addEventListener('mousedown', function(){
                 passSound.play();
             });
@@ -159,6 +158,7 @@
             console.log("game continues");
             checkWinningCondition();
         }
+        console.log(`turns: ${gameData.numTurns[gameData.index]}`);
     }
 
     function checkWinningCondition() {

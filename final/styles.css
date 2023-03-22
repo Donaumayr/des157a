@@ -26,3 +26,7 @@ figure {
 figcaption {
     margin-top:10px;
 }
+
+#body {
+    line-height: 2em;
+}
