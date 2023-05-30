@@ -1,0 +1,258 @@
+body {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.5em;
+    color:#fff;
+    position: relative;
+}
+main {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 1200px;
+    height: 750px;
+    background-image: url(images/feltbg.jpg);
+    display: flex;
+}
+#board {
+    width: calc(100% - 500px);
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left:20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+article {
+    width:400px;
+    line-height: 2em;
+}
+.p1 {
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-right: solid 2px #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.p2 {
+    width:250px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-left: solid 2px #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.started {
+    animation: intro 2s ease-out forwards;
+}
+@keyframes intro {
+    0% {width:0;}
+    100% {width:250px;}
+}
+
+h1 {
+    font-size: 4em;
+    padding-bottom: 0;
+    margin:20px;
+    margin-top:60px;
+}
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    font-weight: 500;
+    text-align: center;
+    width:100%;
+}
+#subheader {
+    font-weight: 100;
+    margin-top:0;
+    font-size: 1.05em;
+    color: #f8eec9;
+}
+
+.p1score {
+    background-image: url(images/p1chip.svg);
+    height: 174px;
+    width: 174px;
+    text-align: center;
+    line-height: 158px;
+    font-size: 3em;
+    margin-top:20px;
+    position: relative;
+    z-index: 1;
+}
+.p2score {
+    background-image: url(images/p2chip.svg);
+    height: 174px;
+    width: 174px;
+    text-align: center;
+    line-height: 158px;
+    font-size: 3em;
+    margin-top:20px;
+    position: relative;
+    z-index: 1;
+}
+.pdisplay {
+    display: block;
+}
+
+#topcontrol {
+    display: flex;
+    flex-direction: row-reverse;
+    width:100%;
+}
+#quit, #restart {
+    font-size: 2em;
+    margin:20px;
+    margin-bottom: 0;
+    margin-top:20px;
+}
+
+#startgame {
+    font-size: 2.6em;
+    margin-top:40px;
+}
+
+button { 
+    padding: 10px;
+    background-color: transparent;
+    color: #f8eec9;
+    border:none;
+    outline:none;
+    cursor: pointer;
+}
+
+#actions {
+    margin-top: auto;
+    display: flex;
+}
+
+#draw, #drawagain {
+    background-image: url(images/draw.svg);
+    width:276px;
+    height:115px;
+    margin-top: auto;
+}
+
+#pass {
+    background-image: url(images/pass.svg);
+    width: 128px;
+    height: 128px;
+    margin-left:50px;
+    margin-bottom: 20px;
+}
+
+#score {
+    margin-top:0;
+    padding-top: 0;
+}
+
+#game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#game p {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+    width:100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.shownslow {
+    animation: fade 2s ease-out forwards;
+}
+
+.shown {
+    animation: fade 2s ease-out forwards;
+}
+@keyframes fade {
+    0% {opacity:0;}
+    50% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.flipcard {
+    background-color: transparent;
+    width: 229px;
+    height: 376px;
+    /*border: 1px solid #f1f1f1;*/
+    perspective: 1000px;
+}
+.flipcardinner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flipped {
+    animation: flip 1s ease-out forwards;
+}
+
+@keyframes flip {
+    0% {transform: rotateY(0deg);}
+    100% {transform: rotateY(180deg);}
+}
+
+/*.flipcard:hover .flipcardinner {
+    transform: rotateY(180deg);
+}*/
+
+.flipcardfront, .flipcardback {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}                                                 
+.flipcardback {
+    transform: rotateY(180deg);
+}
+
+.mLeft {
+    animation: moveleft 1s ease-in 0.6s forwards;
+}
+.mRight {
+    animation: moveright 1s ease-in 0.6s forwards;
+}
+
+@keyframes moveright {
+    0% {transform: translate(0px); opacity:1;}
+    100% {transform: translate(40px); opacity:0;}
+}
+@keyframes moveleft {
+    0% {transform: translate(0px); opacity:1;}
+    100% {transform: translate(-40px); opacity:0;}
+}
+
+#win {
+    margin-top:200px;
+    line-height: 1.5em;
+    text-align: center;
+    font-weight: 400;
+}
+#win2 {
+    margin-top: 0;
+    margin-bottom: 70px;
+}
+
+b {
+    font-weight: 900;
+}
